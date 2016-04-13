@@ -1,6 +1,6 @@
 {
   "name": "Plugin School ",
   "tagline": "Learn How to Code",
-  "body": "# Plugin School\r\n\r\n\r\n\r\n## **Chapter 1**\r\n### Plugin.yml\r\n\r\nWant to make a plugin so let start with plugin.yml first you need to make a file called plugin.yml when done open it with a editor (I will suggest Notpad++ or NetBean) and put these codes:\r\n`\r\nname: Your Plugin Name\r\nauthor: Your Name\r\napi: The New Api\r\nversion: Any version\r\nmain: Something\\Something\r\n`\r\n\r\n",
+  "body": "# Plugin School\r\n\r\n\r\n\r\n## **Chapter 1**\r\n### Plugin.yml\r\n\r\nWant to make a plugin so let start with plugin.yml first you need to make a file called plugin.yml when done open it with a editor (I will suggest Notpad++ or NetBean) and put these codes:\r\n\r\n`\r\nname: Your Plugin Name\r\n\r\nauthor: Your Name\r\n\r\napi: The New Api\r\n\r\nversion: Any version\r\n\r\nmain: Something\\Something\r\n`\r\n\r\n\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }

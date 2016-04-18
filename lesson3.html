@@ -22,9 +22,9 @@
 <h2>Volume 1: Basics and Concepts</h2>
 <p><strong>Lesson 3: Using Player Events</strong></p>
 
-You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events!
+<p> You know the basics! SO what now? Now we are going to learn about something that makes plugins how they are! Player Events\Events...In this lesson we will be focusing on PlayerJoinEvent and PlayerQuitEvent - Two Major Events! 
 
-To apply this in your plugin import these USE Statements! Remember "use" statements? import the following:
+To apply this in your plugin import these USE Statements! Remember "use" statements? import the following: </p>
 <code>// Event when Player Joins
 use pocketmine\event\player\PlayerJoinEvent;
 
@@ -40,36 +40,36 @@ use pocketmine\Server;
 // Event Listener
 use pocketmine\event\Listener;</code>
 
-Since we are using events now, we change the class staement a bit:
+<p> Since we are using events now, we change the class staement a bit: </p>
 <code>class Main extends PluginBase implements Listener{</code>
 
-For the onEnable() function we add this line right after public function onEnable() (Since we are USING EVENTS!!!)
+<p> For the onEnable() function we add this line right after public function onEnable() (Since we are USING EVENTS!!!) </p>
 <code>public function onEnable(){
      $this->getServer()->getPluginManager()->registerEvents($this,$this); // THIS LINE
      $this->getLogger()->info("Plugin Enabled");</code>
 
-Do you want to broadcast a message on the server saying someone joined in a FANCY way? Then we are going to use another function!!! Here:
+<p>Do you want to broadcast a message on the server saying someone joined in a FANCY way? Then we are going to use another function!!! Here: </p>
 <code>public function onJoin(PlayerJoinEvent $event){
    $player = $event->getPlayer();
    $name = $player->getName();
    $this->getServer()->broadcastMessage("$name Joined The COOL Server! OMG Guys, LOL!");
    </code>
-Did you know: getPlayer() and getName() are public functions? these are how NEW Functions are made! onJoin is a new public function! People who know JavaScript may know this!
+<p>Did you know: getPlayer() and getName() are public functions? these are how NEW Functions are made! onJoin is a new public function! People who know JavaScript may know this!
 
-It's Cool That You Got A Join Message but, do you want in COLOR? Import this "use" statement to your code:
+It's Cool That You Got A Join Message but, do you want in COLOR? Import this "use" statement to your code: </p>
 <code>// Text Format formats text and changes Color
 
 use pocketmine\utils\TextFormat;</code>
 
-Now for your message:
+<p>Now for your message:</p>
 <code>$this->getServer()->broadcastMessage(TextFormat::GREEN."$name Joined The COOL Server! OMG Guys, LOL!");</code>
 
-Now the Color of your message will be Green!
+<p> Now the Color of your message will be Green!
 
 NOTE: Instead of using getPlayer() in PlayerDeathEvent, make sure you use getEntity() or it will crash your server for everytime someone dies.
 
-A LIST of PLAYER events could be found here: ClickMeBro
-Volume 1 End
+A LIST of PLAYER events could be found here: <a href="https://github.com/ImagicalMine/ImagicalMine/tree/master/src/pocketmine/event/player">ClickMeBro</a>
+Volume 1 End </p>
     </section>
 
   

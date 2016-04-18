@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Plugin School  by ImagicalDevs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Plugin School </h1>
+      <h2 class="project-tagline">Learn How to Code</h2>
+      <a href="index.html" class="btn">Home Page</a>
+      <a href="lesson1.html" class="btn">Lesson Number 1</a>
+    <a href="pluginyml.html" class="btn">Sample plugin.yml</a>
+    </section>
+
+    <section class="main-content">
+<h2>Volume 1: Basics and Concepts</h2>
+<p><strong>Lesson 2: Enable and Disable and Load Functions!</strong></p>
+<p> After the class statement press ENTER key and type </p>
+<code>public function onLoad(){</code> 
+<p> If you want a Load Message! Press ENTER after the function line and type:  </p>
+<code>$this->getLogger()->info("Plugin Loading");</code>
+<p> You just created a public function and created a load message.
+
+Here is the layout so far including all public function im going to mention in this lesson:  </p>
+<code><?php
+
+namespace ImagicalDevs\Plugin;
+
+use pocketmine\plugin\PluginBase;
+
+class Main extends PluginBase{
+
+          public function onLoad(){
+                    $this->getLogger()->info("Plugin Loading");
+          }
+          public function onEnable(){
+                    $this->getLogger()->info("Enabled Plugin");
+          }
+          public function onDisable(){
+                    $this->getLogger()->info("Plugin Disabled");
+          }
+}</code>
+
+<p> Public function onEnable is when your plugin Enables on the Logger or as we all know the CONSOLE. The plugin sends a message to the console on Enable!
+
+Public function on Disable is when your plugin disables on the Logger or as we also know the CONSOLE. The plugin sends a message to the console on Disable!
+
+You have learned the 3 BASIC Function in ImagicalMine! Congratz!  </p>
+
+    </section>
+
+  
+  </body>
+</html>

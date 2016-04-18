@@ -70,6 +70,76 @@ a {
 @media screen and (max-width: 42em) {
   .page-header {
     padding: 2rem 1rem; } }
+    
+.volume1 {
+  color: #ggg;
+  text-align: center;
+  background-color: #159953;
+  background-image: linear-gradient(120deg, #155799, #159953); }
+
+@media screen and (min-width: 64em) {
+  .volume1 {
+    padding: 5rem 6rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .volume1 {
+    padding: 3rem 4rem; } }
+
+@media screen and (max-width: 42em) {
+  .volume1 {
+    padding: 2rem 1rem; } }
+
+.volume2 {
+  color: #eee;
+  text-align: center;
+  background-color: #159959;
+  background-image: linear-gradient(120deg, #155799, #159959); }
+
+@media screen and (min-width: 64em) {
+  .volume2 {
+    padding: 5rem 6rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .volume2 {
+    padding: 3rem 4rem; } }
+
+@media screen and (max-width: 42em) {
+  .volume2 {
+    padding: 2rem 1rem; } }
+.volume3 {
+  color: #ddd;
+  text-align: center;
+  background-color: #159921;
+  background-image: linear-gradient(120deg, #155799, #159921); }
+
+@media screen and (min-width: 64em) {
+  .volume3 {
+    padding: 5rem 6rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .volume3 {
+    padding: 3rem 4rem; } }
+
+@media screen and (max-width: 42em) {
+  .volume3 {
+    padding: 2rem 1rem; } }
+.genphp {
+  color: #hhh;
+  text-align: center;
+  background-color: #159943;
+  background-image: linear-gradient(120deg, #155799, #159943); }
+
+@media screen and (min-width: 64em) {
+  .genphp {
+    padding: 5rem 6rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .genphp {
+    padding: 3rem 4rem; } }
+
+@media screen and (max-width: 42em) {
+  .genphp {
+    padding: 2rem 1rem; } }
 
 .project-name {
   margin-top: 0;

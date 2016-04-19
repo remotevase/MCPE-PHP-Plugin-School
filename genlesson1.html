@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Plugin School  by ImagicalDevs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Plugin School </h1>
+      <h2 class="project-tagline">Learn How to Code</h2>
+    <a href="index.html" class="btn">Home Page <br> Has all of the lessons</a>
+    </section>
+
+    <section class="main-content">
+<h2>General PHP Knowledge: Volume A</h2>
+<p><strong>Lesson 1: Using "switch" statements</strong></p>
+<p> Some devs like @Blabla wanted to know how to use the switch() statements properly!
+So I decided to post a tutorial on it! Special thanks to @Blabla
+
+To Start Of: What is a Switch() statement and what does it do?
+
+1) A switch statement is a really organized statement that's better than a If statement to focus on a certain property or variable and cases of them!
+Recalling If Statements
+
+GENERAL Example: </p>
+
+<code>if($number == 1){
+   echo "Hi #1";
+}else{
+   if($number == 2){
+      echo "whats Up #2?";
+}
+</code>
+<p> However with a switch statement: </p>
+<code>
+switch($number){
+
+   case 1:
+   echo "Hi #1";
+   break;
+
+   case 2:
+   echo "Whats Up #2?";
+   break;
+
+   default:
+   echo "never heard of it";
+   break;
+}</code>
+
+<p> Analyzing Parts of a Switch!
+
+case:
+The Case statement is similar to "==" in a If statement as the code executes as if the number chosen was 1.
+
+break:
+Similar to the closing bracket of an If statement, break ends the current case.
+
+default:
+This means if the parameter was not part of the case system like for example, in this general example above, any number thats NOT 1 or 2 gets that message
+
+Using it In ImagicalMine API
+Assuming you know how to code after reading those tutorials of mine:
+How does it work in the API?
+
+Recalling that Most Plugins Use Strings for the cases, and the example above was for int abbreviated for integer.
+
+For strings it would be: </p>
+<code>switch(strtolower($string)){
+   case "Hello":
+   echo "Hello World";
+   break;
+} </code>
+<p> Notice how the case parameter is quoted as it represents a string case.
+
+Similarly in API:
+People use the switch statement for commands usually:
+Lets take a look! </p>
+<code>public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+   switch(strtolower($cmd->getName()){
+      case "cg":
+      $sender->setGameMode(1);
+      break;
+
+      case "sg":
+      $sender->setGameMode(0);
+      break;
+   }
+return true;
+}</code>
+<p> So in Conclusion: Switch statements are good for organization and is most;y used in onCommand().
+Enjoy! Happy Coding!
+
+REFERENCE </p>
+<code>
+strtolower()
+Converts Chosen String to all Lower Case
+
+int
+A number that is either a negative integer or positive integer.
+NOTE: Ints ARE NOT Strings
+</code>
+
+
+    </section>
+
+  
+  </body>
+</html>

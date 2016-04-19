@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Plugin School  by ImagicalDevs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Plugin School </h1>
+      <h2 class="project-tagline">Learn How to Code</h2>
+    <a href="index.html" class="btn">Home Page <br> Has all of the lessons</a>
+    </section>
+
+    <section class="main-content">
+<h2>Volume 3: Config</h2>
+<p><strong>Lesson 1: Most Basic Method</strong></p>
+
+<p> A Config is useful for many reasons, mainly for things like: <br>
+- Configuration <br>
+- Saving, Storing, Getting Data <br>
+
+In the "onEnable" Function we are gonna add some new lines: </p>
+
+<code>@mkdir($this->getDataFolder());
+$this->config = new Config ($this->getDataFolder() . "config.yml" , Config::YAML, array());</code>
+
+<p> and Don't Forget: A NEW USE STATEMENT! </p>
+
+<code>// Config utility in oreder to make Configs!
+use pocketmine\utils\Config;</code>
+
+<p> Explanation: <br>
+mkdir - makes a new directory within the given parameter (or current directory)
+$this->config - This will be (an example) property defined for the whole PHP script excluding the 'onDisable' Function
+
+LOCAL VARIABLES like $abc cannot be Used in OTHER Functions!
+
+The mkdir code above makes a folder in your plugins folder with your config!
+
+To add(set) or remove something you do: </p>
+
+<code>$this->config->set("string1");
+
+$this->config->remove("string1");</code>
+
+<p> To get something from the config for like example, a join MSG: </p>
+
+<code>$this->config->get("JOIN_MSG");</code>
+
+<p> NOTE: If you did for example: </p>
+<code>$this->settings =
+
+// INSTEAD OF
+
+$this->config =</code>
+<p> Thats ok! 
+However, instead of $this->config->remove(), etc... it would be $this->settings->remove() since u wanted your property to be $this->setting </p>
+
+    </section>
+
+  
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Plugin School  by ImagicalDevs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Plugin School </h1>
+      <h2 class="project-tagline">Learn How to Code</h2>
+    <a href="index.html" class="btn">Home Page <br> Has all of the lessons</a>
+    </section>
+
+    <section class="main-content">
+<h2>Volume 2: Commands</h2>
+<p><strong>Lesson 1: Setting Up A Command</strong></p>
+<p> Using commands in a plugin enchants your Plugin! Commands can automatically and easily do things for you! 
+Insert these "use" statements if you are using commands: </p>
+<code>// Command
+use pocketmine\command\Command;
+
+// Person who does command
+use pocketmine\command\CommandSender;</code>
+To setup the command we use a public function! Layout:
+<code>public function onCommand(CommandSender $sender,Command $cmd,$label,array $args){
+}</code>
+
+<p> It may be long for a function, but thats how you're gonna make commands!
+After Public Function onCommand():</p>
+
+<code>if($cmd->getName() == "test"){ // I am just using /test as an Example COMMAND
+     $sender->sendMessage("This is a Test");</code>
+<p> Hmm. Now you are using "if" statements! Very Important in PHP! In this case:
+Explanation: If the Command Name is /test (in this case), Send a message to the player who executed this Command!
+PREVIEW: Lets see what we got so far... </p>
+<code><?php
+
+namespace ImagicalDevs\Test;
+
+use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\utils\TextFormat;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+
+class Main extends PluginBase implements Listener{
+     public function onEnable(){
+          $this->getServer()->getPluginManager()->registerEvents($this,$this);
+          $this->getLogger()->info("Plugin Enabled");
+     }
+     public function onJoin(PlayerJoinEvent $event){
+          $player = $event->getPlayer();
+          $name = $player->getName();
+          $this->getServer()->broadcastMessage(TextFormat::GREEN."$name Joined the COOL Server! OMG Guys, LOL!");
+     }
+     public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+          if($cmd->getName() == "test"){
+               $sender->sendMessage("This Is A Test!");
+          }
+          return true;
+     }
+}</code>
+<p> Return True after "If" statement brackets "{ }"
+So when some one does /test they get a message "This is a test!"
+
+You want to do something better with your command? Maybe this will help:
+On command the player will receive an item! </p>
+<code>if($cmd->getName() == "test"){
+     $sender->getInventory()->addItem(Item::get(364,0,2)); //364 = Item; Steak
+     $sender->sendMessage(TextFormat::BOLD."OMG YOU GOT 4 STEAK!!!");
+}
+return true;</code>
+
+<p> You got 4 steak using a Command! This is one of the great powers of commands!
+
+WAIT!!! Somethings not right! If the console was the CommandSender What will happen? How do we prevent the Console?
+
+To prevent the situation above we are going to use an if statement including "instanceof" </p>
+
+<code>if($cmd->getName() == "test"){
+     if(!$sender instanceof Player){ // Basically this checks if the Command Sender is NOT a player
+          $sender->sendMessage("This Command Only Works for players!"); // For Console Command Sender
+     }else{ //if not a CONSOLE
+          $sender->getInventory()->addItem(Item::get(364,0,4));
+          $sender->sendMessage("You Got 4 Steak!");
+     }
+}
+return true;</code>
+
+<p> This will prevent the console from performing this command! </p>
+
+
+    </section>
+
+  
+  </body>
+</html>

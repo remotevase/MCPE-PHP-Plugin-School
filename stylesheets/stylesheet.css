@@ -79,15 +79,15 @@ a {
 
 @media screen and (min-width: 64em) {
   .volume1 {
-    padding: 5rem 6rem; } }
+    padding: 10px;; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .volume1 {
-    padding: 3rem 4rem; } }
+    padding: 10px; } }
 
 @media screen and (max-width: 42em) {
   .volume1 {
-    padding: 2rem 1rem; } }
+    padding: 10px; } }
 
 .volume2 {
   color: #eee;

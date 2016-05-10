@@ -97,15 +97,15 @@ a {
 
 @media screen and (min-width: 64em) {
   .volume2 {
-    padding: 5rem 6rem; } }
+    padding: 10px; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .volume2 {
-    padding: 3rem 4rem; } }
+    padding: 10px; } }
 
 @media screen and (max-width: 42em) {
   .volume2 {
-    padding: 2rem 1rem; } }
+    padding: 10px; } }
 .volume3 {
   color: #ddd;
   text-align: center;
@@ -114,15 +114,15 @@ a {
 
 @media screen and (min-width: 64em) {
   .volume3 {
-    padding: 5rem 6rem; } }
+    padding: 10px; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .volume3 {
-    padding: 3rem 4rem; } }
+    padding: 10px; } }
 
 @media screen and (max-width: 42em) {
   .volume3 {
-    padding: 2rem 1rem; } }
+    padding: 10px; } }
 .genphp {
   color: #hhh;
   text-align: center;
@@ -131,15 +131,15 @@ a {
 
 @media screen and (min-width: 64em) {
   .genphp {
-    padding: 5rem 6rem; } }
+    padding: 10px; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .genphp {
-    padding: 3rem 4rem; } }
+    padding: 10px; } }
 
 @media screen and (max-width: 42em) {
   .genphp {
-    padding: 2rem 1rem; } }
+    padding: 10px; } }
 
 .project-name {
   margin-top: 0;

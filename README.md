@@ -1,6 +1,17 @@
 # Plugin-School
 https://ImagicalDevs.github.io/Plugin-School
 
+# @TheKnightGamer
+Set up the basis of the website with gh-pages
+
+# @AmiroEmad
+Made lots of things possible
+
+# @remotevase
+Added all of the lessons and redesigned index
+
+# @Taki21
+Created the tutorial that's the basis 
 Thanks to @TheKnightGamer for setting up the basis of this website.
 
 Thanks to @AmiroEmad for making lots of this possible.

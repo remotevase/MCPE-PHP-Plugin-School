@@ -14,4 +14,4 @@ Added all of the lessons and redesigned index
 Created the tutorial on IM Forums that's the basis of all of the lessons
 
 # @ImagicalGamer
-Thanks for not helping at all! Like, at **all*! He deserves congratulations for all of the work that he did not do!
+Thanks for not helping at all! Like, at **all**! He deserves congratulations for all of the work that he did not do!

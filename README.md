@@ -1,5 +1,5 @@
 # Plugin-School
-https://ImagicalDevs.github.io/Plugin-School
+https://remotevase.github.io/MCPE-PHP-Plugin-School
 
 # @TheKnightGamer
 Set up the basis of the website with gh-pages
